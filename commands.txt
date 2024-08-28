@@ -1,0 +1,8 @@
+ng new mono-workspace --create-application=false
+cd mono-workspace
+ng g application hosp-app --routing --style=scss
+ng g application mfe-app --routing --style=scss
+ng add @angular-architects/module-federation --project host-app --port=4200
+ng add @angular-architects/module-federation --project mfe-app --port=4300
+ng s host-app 
+ng s mfe-app
